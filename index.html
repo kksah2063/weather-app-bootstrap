@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid">
+          <a class="navbar-brand">Weather App</a>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container mt-5">
+        <h1 class="card-title text-center mb-4">
+          Weather in <span id="city">--</span>
+        </h1>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <!-- Temperature Card -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temperatures</h4>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title mb-3 fs-1">
+                  <span id="temp_heading"></span>
+                </h4>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>
+                    <strong>Temperature:</strong> <span id="temp">--</span>
+                  </li>
+                  <li>
+                    <strong>Min Temp:</strong> <span id="min_temp">--</span>
+                  </li>
+                  <li>
+                    <strong>Max Temp:</strong> <span id="max_temp">--</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Humidity Card -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title mb-3 fs-1">
+                  <span id="humidity_heading"></span>
+                </h4>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>
+                    <strong>Humidity:</strong> <span id="humidity">--</span>
+                  </li>
+                  <li>
+                    <strong>Visibility:</strong> <span id="visibility">--</span>
+                  </li>
+                  <li>
+                    <strong>Feels like:</strong>
+                    <span id="expected_temp">--</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wind Info Card -->
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title mb-3 fs-1">
+                  <span id="wind_heading"></span>
+                </h4>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>
+                    <strong>Wind speed:</strong> <span id="wind">--</span>
+                  </li>
+                  <li>
+                    <strong>Sunrise:</strong> <span id="sunrise">--</span>
+                  </li>
+                  <li><strong>Sunset:</strong> <span id="sunset">--</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
